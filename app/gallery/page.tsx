@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GalleryContent from "@/components/pages/GalleryContent";
 
 export const metadata: Metadata = {
-  title: "Gallery — Inflatable Bounce Castles & Event Photos | King Balloon Lahore",
+  title: "Gallery — Balloon Decoration & Event Photos",
   description:
     "View King Balloon's photo gallery of 16 premium inflatables — unicorn castles, Minions slides, water slides, climbing walls & more. See our work at real events across Lahore. Call 0315-9555528.",
   alternates: {

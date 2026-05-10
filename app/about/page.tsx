@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AboutContent from "@/components/pages/AboutContent";
 
 export const metadata: Metadata = {
-  title: "About Us — King Balloon Inflatable Rentals Lahore",
+  title: "About Us — Lahore's Event Decoration Company",
   description:
     "Learn about King Balloon — Lahore's trusted inflatable rental company since 2014. We provide safe, CE-certified bounce castles, water slides & party inflatables across Pakistan. Call 0315-9555528.",
   alternates: {

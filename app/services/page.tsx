@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicesContent from "@/components/pages/ServicesContent";
 
 export const metadata: Metadata = {
-  title: "Services — Bounce Castles, Water Slides & Inflatables | King Balloon Lahore",
+  title: "Services — Balloon Decoration, Bounce Castles, Water Slides & Inflatables",
   description:
     "Browse King Balloon's full collection of 16+ inflatables in Lahore: themed bounce castles, combo slides, water slides & giant inflatable games. CE-certified, delivered & setup at your venue. Call 0315-9555528.",
   alternates: {
