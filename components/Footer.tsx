@@ -41,7 +41,7 @@ export default function Footer() {
               <a href="#" className="w-10 h-10 rounded-full border border-king-border hover:border-gold flex items-center justify-center text-gray-400 hover:text-gold transition-all duration-300">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-king-border hover:border-gold flex items-center justify-center text-gray-400 hover:text-gold transition-all duration-300">
+              <a href="https://www.instagram.com/kingballoonofficial/?hl=en" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-king-border hover:border-gold flex items-center justify-center text-gray-400 hover:text-gold transition-all duration-300">
                 <Instagram size={18} />
               </a>
             </div>
@@ -75,8 +75,8 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400 text-sm">
                 <Phone size={16} className="text-gold mt-0.5 shrink-0" />
-                <a href="tel:03219555528" className="hover:text-gold transition-colors">
-                  0321-9555528
+                <a href="tel:03159555528" className="hover:text-gold transition-colors">
+                  0315-9555528
                 </a>
               </li>
               <li className="flex items-start gap-3 text-gray-400 text-sm">
@@ -95,7 +95,7 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-600">
           <p>© {new Date().getFullYear()} King Balloon. All rights reserved.</p>
-          <p>Bringing Joy to Every Celebration 🎉</p>
+          <p>Bringing Joy to Every Celebration</p>
         </div>
       </div>
     </footer>

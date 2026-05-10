@@ -95,7 +95,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <a
-            href="tel:03219555528"
+            href="tel:03159555528"
             className="hidden md:flex items-center gap-2 bg-gold hover:bg-gold-light text-king-dark font-bold px-5 py-2.5 rounded-full transition-all duration-300 text-sm tracking-wide shadow-lg shadow-gold/20"
           >
             <Phone size={15} />
@@ -128,11 +128,11 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="tel:03219555528"
+            href="tel:03159555528"
             className="mt-2 flex items-center justify-center gap-2 bg-gold text-king-dark font-bold px-6 py-3 rounded-full text-base"
           >
             <Phone size={16} />
-            03219555528
+            0315-9555528
           </a>
         </div>
       )}

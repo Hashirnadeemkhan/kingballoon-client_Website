@@ -115,11 +115,11 @@ export default function HomeContent() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
             <a
-              href="tel:03219555528"
+              href="tel:03159555528"
               className="flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-king-dark font-bold px-8 py-4 rounded-full transition-all duration-300 text-base shadow-xl shadow-gold/30 hover:scale-105"
             >
               <Phone size={18} />
-              Call to Book — 0321-9555528
+              Call to Book — 0315-9555528
             </a>
             <Link
               href="/gallery"
@@ -288,10 +288,10 @@ export default function HomeContent() {
               ))}
             </ul>
             <a
-              href="tel:03219555528"
+              href="tel:03159555528"
               className="inline-flex items-center gap-2 mt-10 bg-gold hover:bg-gold-light text-king-dark font-bold px-7 py-3 rounded-full transition-all duration-300 text-sm"
             >
-              <Phone size={16} /> Call Now: 0321-9555528
+              <Phone size={16} /> Call Now: 0315-9555528
             </a>
           </div>
 
@@ -334,11 +334,11 @@ export default function HomeContent() {
             Contact us today to check availability and get a quote for your upcoming event.
           </p>
           <a
-            href="tel:03219555528"
+            href="tel:03159555528"
             className="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-king-dark font-extrabold px-10 py-5 rounded-full text-lg transition-all duration-300 shadow-2xl shadow-gold/30 hover:scale-105"
           >
             <Phone size={22} />
-            0321-9555528
+            0315-9555528
           </a>
         </div>
       </section>

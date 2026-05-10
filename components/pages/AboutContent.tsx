@@ -176,10 +176,10 @@ export default function AboutContent() {
             Our Services <ChevronRight size={16} />
           </Link>
           <a
-            href="tel:03219555528"
+            href="tel:03159555528"
             className="inline-flex items-center gap-2 border border-gold text-gold hover:bg-gold hover:text-king-dark px-7 py-3 rounded-full font-semibold transition-all duration-300"
           >
-            <Phone size={16} /> 0321-9555528
+            <Phone size={16} /> 0315-9555528
           </a>
         </div>
       </section>

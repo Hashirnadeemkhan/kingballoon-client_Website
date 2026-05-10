@@ -256,10 +256,10 @@ export default function GalleryContent() {
           Call us to check availability for your event date and get an instant quote.
         </p>
         <a
-          href="tel:03219555528"
+          href="tel:03159555528"
           className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-king-dark font-bold px-8 py-4 rounded-full transition-all duration-300 text-base shadow-lg shadow-gold/20 hover:scale-105"
         >
-          <Phone size={18} /> Book Now: 0321-9555528
+          <Phone size={18} /> Book Now: 0315-9555528
         </a>
       </section>
     </>

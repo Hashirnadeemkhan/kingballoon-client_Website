@@ -4,7 +4,7 @@ import AboutContent from "@/components/pages/AboutContent";
 export const metadata: Metadata = {
   title: "About Us — King Balloon Inflatable Rentals Lahore",
   description:
-    "Learn about King Balloon — Lahore's trusted inflatable rental company since 2014. We provide safe, CE-certified bounce castles, water slides & party inflatables across Pakistan. Call 0321-9555528.",
+    "Learn about King Balloon — Lahore's trusted inflatable rental company since 2014. We provide safe, CE-certified bounce castles, water slides & party inflatables across Pakistan. Call 0315-9555528.",
   alternates: {
     canonical: "https://www.kingballoon.pk/about",
   },

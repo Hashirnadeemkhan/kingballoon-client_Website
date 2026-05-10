@@ -171,7 +171,7 @@ export default function ServicesContent() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { step: "01", title: "Choose Your Inflatable", desc: "Browse our full collection and pick the perfect unit for your event theme." },
-              { step: "02", title: "Call to Book", desc: "Call 0321-9555528 to confirm availability and get a quote for your date." },
+              { step: "02", title: "Call to Book", desc: "Call 0315-9555528 to confirm availability and get a quote for your date." },
               { step: "03", title: "We Deliver & Setup", desc: "Our team arrives on time, sets up everything safely, and returns to collect." },
             ].map((s) => (
               <div key={s.step} className="flex items-start gap-5 section-reveal">
@@ -262,10 +262,10 @@ export default function ServicesContent() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:03219555528"
+            href="tel:03159555528"
             className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-king-dark font-bold px-8 py-4 rounded-full transition-all duration-300 text-base shadow-lg shadow-gold/20"
           >
-            <Phone size={18} /> Call: 0321-9555528
+            <Phone size={18} /> Call: 0315-9555528
           </a>
           <Link
             href="/gallery"

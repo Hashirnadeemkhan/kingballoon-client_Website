@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | King Balloon Lahore",
   },
   description:
-    "King Balloon is Lahore's #1 inflatable rental company. Rent bounce castles, water slides, combo slides & giant inflatables for birthdays, weddings, school events & corporate functions. Call 0321-9555528.",
+    "King Balloon is Lahore's #1 inflatable rental company. Rent bounce castles, water slides, combo slides & giant inflatables for birthdays, weddings, school events & corporate functions. Call 0315-9555528.",
   keywords: [
     "bounce castle rental Lahore",
     "inflatable rental Lahore",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "King Balloon",
     title: "King Balloon | #1 Bounce Castle & Inflatable Rental in Lahore",
     description:
-      "Lahore's premier inflatable rental company. 16+ themed bounce castles, water slides & giant games. Delivered & setup at your venue. Call 0321-9555528.",
+      "Lahore's premier inflatable rental company. 16+ themed bounce castles, water slides & giant games. Delivered & setup at your venue. Call 0315-9555528.",
     images: [
       {
         url: "/og-image.jpg",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "King Balloon | Bounce Castle Rental Lahore",
     description:
-      "16+ themed inflatables for birthdays, weddings & corporate events. Professional delivery & setup. Call 0321-9555528.",
+      "16+ themed inflatables for birthdays, weddings & corporate events. Professional delivery & setup. Call 0315-9555528.",
     images: ["/og-image.jpg"],
   },
   robots: {

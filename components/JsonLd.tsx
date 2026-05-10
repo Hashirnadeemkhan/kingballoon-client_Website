@@ -9,7 +9,7 @@ export default function JsonLd() {
       "Lahore's premier inflatable rental company offering bounce castles, water slides, combo slides and giant inflatables for birthdays, weddings, school events and corporate functions.",
     url: "https://www.kingballoon.pk",
     logo: "https://www.kingballoon.pk/logo.pdf",
-    telephone: "+923219555528",
+    telephone: "+923159555528",
     priceRange: "$$",
     currenciesAccepted: "PKR",
     paymentAccepted: "Cash, Bank Transfer",
@@ -77,7 +77,7 @@ export default function JsonLd() {
     },
     sameAs: [
       "https://www.facebook.com/kingballoonpk",
-      "https://www.instagram.com/kingballoonpk",
+      "https://www.instagram.com/kingballoonofficial/",
     ],
   };
 
@@ -89,7 +89,7 @@ export default function JsonLd() {
     logo: "https://www.kingballoon.pk/logo.pdf",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+923219555528",
+      telephone: "+923159555528",
       contactType: "customer service",
       areaServed: "PK",
       availableLanguage: ["English", "Urdu"],
