@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: "https://www.kingballoon.pk",
     images: [
       {
-        url: "/unnamed.webp",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "King Balloon — balloon decoration and event services Lahore",

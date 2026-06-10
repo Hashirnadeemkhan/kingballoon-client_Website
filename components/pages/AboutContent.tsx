@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Star, Shield, Truck, Heart, Phone, ChevronRight } from "lucide-react";
+import FitImage from "@/components/FitImage";
 
 function useScrollReveal() {
   useEffect(() => {
@@ -25,7 +25,7 @@ const values = [
   {
     icon: Star,
     title: "Premium Quality",
-    desc: "We invest in top-quality, commercial-grade inflatables that are built to last and impress.",
+    desc: "We invest in top-quality décor, fresh flowers and commercial-grade inflatables built to impress.",
   },
   {
     icon: Truck,
@@ -44,79 +44,91 @@ export default function AboutContent() {
 
   return (
     <>
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/WhatsApp Image 2026-05-10 at 12.12.03 AM (1).jpeg"
-            alt="King Balloon inflatable rental company Lahore — About Us"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-king-dark" />
-        </div>
-        <div className="relative z-10 text-center px-4 pt-28 pb-16 max-w-4xl mx-auto">
-          <span className="text-gold text-sm font-semibold tracking-widest uppercase block mb-4">Our Story</span>
-          <h1 className="text-5xl sm:text-6xl font-extrabold mb-6">
-            About <span className="text-gold-gradient">King Balloon</span>
-          </h1>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
-            More than a rental company — we are creators of joy, architects of adventure,
-            and the team behind countless smiling faces across Pakistan.
-          </p>
+      {/* ── HERO (light split) ── */}
+      <section className="relative bg-cream overflow-hidden">
+        <div className="absolute -top-24 right-0 w-96 h-96 rounded-full pointer-events-none"
+          style={{ background: "radial-gradient(circle, rgba(200,162,75,0.16) 0%, transparent 70%)" }} />
+        <div className="absolute inset-0 cream-texture opacity-50 pointer-events-none" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left animate-slide-right">
+              <span className="text-gold-dark text-sm font-semibold tracking-widest uppercase block mb-4">Our Story</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 text-ink leading-[1.1]">
+                About <span className="text-gold-gradient">King Balloon</span>
+              </h1>
+              <p className="text-ink-mute text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                More than a rental company — we are creators of joy, architects of celebration,
+                and the team behind countless smiling faces across Lahore.
+              </p>
+            </div>
+            <div className="relative animate-fade-in">
+              <div className="relative aspect-[5/4] rounded-[2rem] overflow-hidden shadow-lift ring-1 ring-king-border bg-white p-2">
+                <div className="relative w-full h-full rounded-[1.6rem] overflow-hidden bg-cream-deep">
+                  <FitImage
+                    src="/WhatsApp Image 2026-06-02 at 6.38.22 PM.jpeg"
+                    alt="King Balloon gold and black luxury event setup Lahore"
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    zoom={false}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
+      {/* ── WHO WE ARE ── */}
       <section className="py-24 px-4 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="section-reveal">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Who We Are</span>
-            <h2 className="text-4xl font-extrabold mt-3 mb-6">
+            <span className="text-gold-dark text-sm font-semibold tracking-widest uppercase">Who We Are</span>
+            <h2 className="text-4xl font-extrabold mt-3 mb-6 text-ink">
               Born from a Passion for <span className="text-gold-gradient">Celebration</span>
             </h2>
-            <div className="space-y-5 text-gray-400 leading-relaxed text-[15px]">
+            <div className="space-y-5 text-ink-mute leading-relaxed text-[15px]">
               <p>
-                King Balloon was founded with one simple mission: to bring premium-quality
-                inflatable fun to events across Pakistan. What started as a small fleet of
-                bounce castles has grown into one of the most recognized names in inflatable
-                rentals in Lahore.
+                King Balloon was founded with one simple mission: to bring premium-quality event
+                decoration and inflatable fun to celebrations across Lahore. What started as a small
+                fleet of bounce castles has grown into one of the most recognized names in event
+                styling in the city.
               </p>
               <p>
-                Over the years, we have served hundreds of birthday parties, school fetes,
-                corporate events, and family gatherings. Our diverse collection spans classic
-                princess castles to action-themed bouncers, water slides, climbing walls, and
+                Over the years, we have decorated hundreds of birthday parties, bridal showers,
+                corporate events, and family gatherings. Our work spans elegant black-and-gold glam
+                backdrops, dreamy pastel themes, themed character setups, water slides, and
                 oversized party games.
               </p>
               <p>
-                Every inflatable in our fleet carries the <strong className="text-white">KB crown</strong> — our
-                promise of quality, cleanliness, and fun. We don&apos;t just rent out equipment;
-                we craft experiences that families remember for years to come.
+                Every setup carries the <strong className="text-ink">KB crown</strong> — our promise of
+                quality, creativity, and care. We don&apos;t just decorate venues; we craft experiences
+                that families remember for years to come.
               </p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 section-reveal">
-            <div className="relative h-64 rounded-2xl overflow-hidden">
-              <Image src="/WhatsApp Image 2026-05-10 at 12.11.59 AM.jpeg" alt="Unicorn bounce castle rental Lahore" fill className="object-cover" sizes="25vw" />
+            <div className="relative h-64 rounded-2xl overflow-hidden shadow-soft bg-cream-deep">
+              <FitImage src="/WhatsApp Image 2026-06-02 at 6.38.31 PM.jpeg" alt="Rose gold balloon garland birthday setup" sizes="25vw" zoom={false} />
             </div>
-            <div className="relative h-64 rounded-2xl overflow-hidden mt-8">
-              <Image src="/WhatsApp Image 2026-05-10 at 12.12.04 AM.jpeg" alt="White wedding bounce castle" fill className="object-cover" sizes="25vw" />
+            <div className="relative h-64 rounded-2xl overflow-hidden mt-8 shadow-soft bg-cream-deep">
+              <FitImage src="/WhatsApp Image 2026-06-02 at 6.38.06 PM.jpeg" alt="Pink unicorn garden birthday setup" sizes="25vw" zoom={false} />
             </div>
-            <div className="relative h-48 rounded-2xl overflow-hidden">
-              <Image src="/WhatsApp Image 2026-05-10 at 12.12.00 AM.jpeg" alt="Disney Cars inflatable Lahore" fill className="object-cover" sizes="25vw" />
+            <div className="relative h-48 rounded-2xl overflow-hidden shadow-soft bg-cream-deep">
+              <FitImage src="/WhatsApp Image 2026-06-02 at 6.37.40 PM.jpeg" alt="Lion King themed first birthday stage" sizes="25vw" zoom={false} />
             </div>
-            <div className="relative h-48 rounded-2xl overflow-hidden mt-4">
-              <Image src="/WhatsApp Image 2026-05-10 at 12.12.01 AM (2).jpeg" alt="Water slide rental Lahore" fill className="object-cover" sizes="25vw" />
+            <div className="relative h-48 rounded-2xl overflow-hidden mt-4 shadow-soft bg-cream-deep">
+              <FitImage src="/WhatsApp Image 2026-06-02 at 6.37.47 PM.jpeg" alt="Giant inflatable water slide rental Lahore" sizes="25vw" zoom={false} />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-king-card border-y border-king-border">
+      {/* ── VALUES ── */}
+      <section className="py-24 bg-cream-deep border-y border-king-border">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16 section-reveal">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Our Principles</span>
-            <h2 className="text-4xl font-extrabold mt-3 mb-4">
+            <span className="text-gold-dark text-sm font-semibold tracking-widest uppercase">Our Principles</span>
+            <h2 className="text-4xl font-extrabold mt-3 mb-4 text-ink">
               What Sets Us <span className="text-gold-gradient">Apart</span>
             </h2>
             <div className="gold-divider w-24 mx-auto" />
@@ -125,24 +137,25 @@ export default function AboutContent() {
             {values.map((v, i) => (
               <div
                 key={v.title}
-                className="bg-king-dark rounded-2xl p-8 border border-king-border hover:border-gold/40 transition-all duration-500 text-center section-reveal"
+                className="bg-white rounded-2xl p-8 border border-king-border hover:border-gold/40 transition-all duration-500 text-center section-reveal shadow-soft hover:shadow-lift hover:-translate-y-1"
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
-                <div className="w-14 h-14 rounded-2xl bg-gold/10 border border-gold/20 flex items-center justify-center mx-auto mb-5">
-                  <v.icon size={26} className="text-gold" />
+                <div className="w-14 h-14 rounded-2xl bg-gold/12 border border-gold/25 flex items-center justify-center mx-auto mb-5">
+                  <v.icon size={26} className="text-gold-dark" />
                 </div>
-                <h3 className="font-bold text-lg mb-3">{v.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{v.desc}</p>
+                <h3 className="font-bold text-lg mb-3 text-ink">{v.title}</h3>
+                <p className="text-ink-mute text-sm leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* ── JOURNEY ── */}
       <section className="py-24 px-4 max-w-7xl mx-auto">
         <div className="text-center mb-16 section-reveal">
-          <span className="text-gold text-sm font-semibold tracking-widest uppercase">Our Journey</span>
-          <h2 className="text-4xl font-extrabold mt-3">
+          <span className="text-gold-dark text-sm font-semibold tracking-widest uppercase">Our Journey</span>
+          <h2 className="text-4xl font-extrabold mt-3 text-ink">
             Growing <span className="text-gold-gradient">Stronger</span> Every Year
           </h2>
         </div>
@@ -150,34 +163,35 @@ export default function AboutContent() {
           {[
             { year: "2014", event: "Company founded with 3 inflatables" },
             { year: "2017", event: "Expanded to 10+ themed units" },
-            { year: "2020", event: "Launched water slide range" },
+            { year: "2020", event: "Launched décor & floral services" },
             { year: "2024", event: "500+ events & still growing" },
           ].map((m) => (
-            <div key={m.year} className="text-center border border-king-border rounded-2xl p-6 bg-king-card">
+            <div key={m.year} className="text-center border border-king-border rounded-2xl p-6 bg-white shadow-soft">
               <p className="text-3xl font-extrabold text-gold-gradient mb-3">{m.year}</p>
-              <p className="text-gray-400 text-sm leading-relaxed">{m.event}</p>
+              <p className="text-ink-mute text-sm leading-relaxed">{m.event}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="py-16 px-4 text-center border-t border-king-border">
-        <h2 className="text-3xl font-extrabold mb-4">
-          Ready to Party with <span className="text-gold-gradient">King Balloon?</span>
+      {/* ── CTA ── */}
+      <section className="py-16 px-4 text-center border-t border-king-border bg-cream-deep">
+        <h2 className="text-3xl font-extrabold mb-4 text-ink">
+          Ready to Celebrate with <span className="text-gold-gradient">King Balloon?</span>
         </h2>
-        <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-          Explore our full range of inflatables or call us directly to plan your perfect event.
+        <p className="text-ink-mute mb-8 max-w-xl mx-auto">
+          Explore our full range of services or message us directly to plan your perfect event.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-king-dark font-bold px-7 py-3 rounded-full transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-ink font-bold px-7 py-3 rounded-full transition-all duration-300 shadow-gold"
           >
             Our Services <ChevronRight size={16} />
           </Link>
           <a
-            href="tel:03159555528"
-            className="inline-flex items-center gap-2 border border-gold text-gold hover:bg-gold hover:text-king-dark px-7 py-3 rounded-full font-semibold transition-all duration-300"
+            href="https://wa.me/923159555528?text=Hello%20King%20Balloon!%20I%20want%20to%20book%20your%20services." target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 border border-ink/15 text-ink hover:bg-ink hover:text-white px-7 py-3 rounded-full font-semibold transition-all duration-300"
           >
             <Phone size={16} /> 0315-9555528
           </a>

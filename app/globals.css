@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 4%;
-  --foreground: 0 0% 98%;
+  --background: 40 38% 96%;
+  --foreground: 30 12% 8%;
 }
 
 * {
@@ -18,14 +18,14 @@ html {
 }
 
 body {
-  background-color: #0a0a0a;
-  color: #ffffff;
+  background-color: #FBF8F1;
+  color: #161310;
   font-family: "Inter", sans-serif;
 }
 
-/* Gold gradient text utility */
+/* Gold gradient text — tuned for readability on a light background */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #D4AF37, #F0D060, #D4AF37);
+  background: linear-gradient(135deg, #9A7A2E, #C8A24B, #E3C66B, #9A7A2E);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -33,12 +33,20 @@ body {
 
 /* Gold shimmer text */
 .text-gold-shimmer {
-  background: linear-gradient(90deg, #A8881A 0%, #F0D060 40%, #D4AF37 60%, #A8881A 100%);
+  background: linear-gradient(90deg, #9A7A2E 0%, #E3C66B 40%, #C8A24B 60%, #9A7A2E 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: shimmer 3s linear infinite;
+}
+
+/* On dark sections the gold gradient can be brighter */
+.on-dark .text-gold-gradient {
+  background: linear-gradient(135deg, #C8A24B, #F0D78A, #C8A24B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @keyframes shimmer {
@@ -48,14 +56,17 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #F3ECDD;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37;
-  border-radius: 3px;
+  background: #C8A24B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9A7A2E;
 }
 
 /* Section fade-in */
@@ -72,14 +83,11 @@ body {
 /* Gold divider */
 .gold-divider {
   height: 2px;
-  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  background: linear-gradient(90deg, transparent, #C8A24B, transparent);
 }
 
-/* Swiper custom styles */
-.swiper-pagination-bullet {
-  background: #D4AF37 !important;
-}
-.swiper-button-next,
-.swiper-button-prev {
-  color: #D4AF37 !important;
+/* Subtle dotted/grid texture helper for cream sections */
+.cream-texture {
+  background-image: radial-gradient(rgba(200, 162, 75, 0.10) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
