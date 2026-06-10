@@ -25,7 +25,15 @@ const allImages = [
   { src: "/WhatsApp Image 2026-06-02 at 6.38.37 PM.jpeg", title: "K-Pop Character Backdrop", cat: "Themed Birthdays" },
   { src: "/WhatsApp Image 2026-06-02 at 6.37.53 PM.jpeg", title: "Rainbow Shimmer Backdrop", cat: "Themed Birthdays" },
   { src: "/WhatsApp Image 2026-06-02 at 6.37.42 PM.jpeg", title: "Grand Entrance Arch", cat: "Themed Birthdays" },
+  // ── Princess / Sleeping Beauty Theme (real event) ──
+  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM (2).jpeg", title: "Sleeping Beauty Castle Backdrop", cat: "Themed Birthdays" },
+  { src: "/WhatsApp Image 2026-06-07 at 10.22.28 PM.jpeg", title: "Princess Aurora Standee", cat: "Themed Birthdays" },
+  { src: "/WhatsApp Image 2026-06-07 at 10.22.28 PM (1).jpeg", title: "Pink Ombré Balloon Arch", cat: "Themed Birthdays" },
+  { src: "/WhatsApp Image 2026-06-07 at 10.22.30 PM.jpeg", title: "Pink Balloon Entrance Tunnel", cat: "Themed Birthdays" },
   // ── Event Styling (full real events: backdrop + furniture + styling) ──
+  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM.jpeg", title: "Princess Castle Stage Setup", cat: "Event Styling" },
+  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM (3).jpeg", title: "Princess Theme Hall Styling", cat: "Event Styling" },
+  { src: "/WhatsApp Image 2026-06-07 at 10.22.28 PM (2).jpeg", title: "Happy Birthday Princess Corner", cat: "Event Styling" },
   { src: "/first.jpeg", title: "Kids Party Full Setup", cat: "Event Styling" },
   { src: "/WhatsApp Image 2026-06-02 at 6.38.06 PM.jpeg", title: "Pink Unicorn Garden", cat: "Event Styling" },
   { src: "/second.jpeg", title: "Pink Garden Welcome Setup", cat: "Event Styling" },
@@ -34,6 +42,7 @@ const allImages = [
   { src: "/fourth.jpeg", title: "Draped Stage Setup", cat: "Event Styling" },
   { src: "/WhatsApp Image 2026-06-02 at 6.38.04 PM.jpeg", title: "Garden Celebration Welcome", cat: "Event Styling" },
   // ── Inflatable Rentals ──
+  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM (1).jpeg", title: "Princess Castle Bouncer", cat: "Inflatable Rentals" },
   { src: "/WhatsApp Image 2026-06-02 at 6.37.47 PM.jpeg", title: "Giant Water Slide", cat: "Inflatable Rentals" },
   { src: "/WhatsApp Image 2026-06-02 at 6.37.44 PM.jpeg", title: "Dino Water Slide & Pool", cat: "Inflatable Rentals" },
   { src: "/WhatsApp Image 2026-05-10 at 12.11.58 AM.jpeg", title: "Princess Castle", cat: "Inflatable Rentals" },
@@ -64,6 +73,8 @@ const slideshowPool = [
   { src: "/WhatsApp Image 2026-06-02 at 6.38.40 PM.jpeg", label: "Silver Shimmer Backdrop" },
   { src: "/WhatsApp Image 2026-06-02 at 6.38.31 PM.jpeg", label: "Rose Gold Balloon Garland" },
   { src: "/WhatsApp Image 2026-06-02 at 6.38.06 PM.jpeg", label: "Pink Unicorn Garden" },
+  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM.jpeg", label: "Princess Castle Stage Setup" },
+  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM (2).jpeg", label: "Sleeping Beauty Castle Backdrop" },
   { src: "/first.jpeg", label: "Kids Party Full Setup" },
   { src: "/WhatsApp Image 2026-06-02 at 6.37.40 PM.jpeg", label: "Lion King 1st Birthday" },
   { src: "/WhatsApp Image 2026-06-02 at 6.38.14 PM.jpeg", label: "Unicorn & Butterfly Backdrop" },

@@ -106,6 +106,18 @@ const categories = [
         img: "/WhatsApp Image 2026-06-02 at 6.37.42 PM.jpeg",
         features: ["Walk-through arch", "Custom colours", "Halls & lawns"],
       },
+      {
+        title: "Sleeping Beauty Princess Backdrop",
+        desc: "Fairytale pink castle backdrop with Princess Aurora, a shimmering sequin wall, gold balloon accents and a custom name table — a dream setup for little princesses.",
+        img: "/WhatsApp Image 2026-06-07 at 10.22.29 PM (2).jpeg",
+        features: ["Castle backdrop", "Princess Aurora cut-out", "Custom name table"],
+      },
+      {
+        title: "Pink Ombré Balloon Arch",
+        desc: "Soft coral-to-white ombré balloon arch that doubles as a grand entrance or photo frame — a romantic, photogenic centrepiece for any hall.",
+        img: "/WhatsApp Image 2026-06-07 at 10.22.28 PM (1).jpeg",
+        features: ["Ombré colour blend", "Entrance or photo arch", "Indoor halls"],
+      },
     ],
   },
   {
@@ -113,6 +125,12 @@ const categories = [
     label: "Full Event Styling & Furniture",
     tagline: "Themed setups, elegant furniture & complete venue dressing",
     services: [
+      {
+        title: "Princess Castle Stage Setup",
+        desc: "A complete fairytale stage — pink castle towers, Princess Aurora backdrop, gold balloon garland, draped name table and velvet pedestals across a full banquet hall.",
+        img: "/WhatsApp Image 2026-06-07 at 10.22.29 PM.jpeg",
+        features: ["Full stage build", "Castle towers & backdrop", "Banquet halls"],
+      },
       {
         title: "Kids Party Full Setup",
         desc: "Complete kids' party package — themed backdrop, candy cart, and adorable white kids' tables & chairs finished with tulle bows.",

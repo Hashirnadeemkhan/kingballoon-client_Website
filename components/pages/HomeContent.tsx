@@ -11,6 +11,7 @@ const heroSlides = [
   { src: "/WhatsApp Image 2026-06-02 at 6.38.22 PM.jpeg", label: "Gold & Black Glam Backdrop" },
   { src: "/WhatsApp Image 2026-06-02 at 6.38.31 PM.jpeg", label: "Rose Gold Balloon Garland" },
   { src: "/WhatsApp Image 2026-06-02 at 6.38.06 PM.jpeg", label: "Pink Unicorn Garden Theme" },
+  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM.jpeg", label: "Princess Castle Theme Setup" },
   { src: "/WhatsApp Image 2026-06-02 at 6.38.40 PM.jpeg", label: "Silver Shimmer Backdrop" },
   { src: "/WhatsApp Image 2026-06-02 at 6.37.42 PM.jpeg", label: "Grand Entrance Arch" },
 ];
@@ -67,6 +68,7 @@ const galleryPreview = [
   { src: "/WhatsApp Image 2026-06-02 at 6.37.50 PM.jpeg", alt: "Under the sea themed birthday setup" },
   { src: "/WhatsApp Image 2026-06-02 at 6.38.02 PM.jpeg", alt: "Gaming theme birthday backdrop" },
   { src: "/WhatsApp Image 2026-06-02 at 6.38.33 PM.jpeg", alt: "K-Pop themed sequin wall setup" },
+  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM (2).jpeg", alt: "Sleeping Beauty princess castle backdrop" },
   { src: "/WhatsApp Image 2026-06-02 at 6.37.47 PM.jpeg", alt: "Giant inflatable water slide" },
   { src: "/WhatsApp Image 2026-06-02 at 6.38.25 PM.jpeg", alt: "Blush and white birthday arch" },
 ];
@@ -489,6 +491,7 @@ export default function HomeContent() {
               "col-span-2 row-span-1",
               "row-span-2",
               "row-span-1",
+              "row-span-2",
             ];
             return (
               <div
