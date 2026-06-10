@@ -89,7 +89,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="geo.region" content="PK-PB" />
         <meta name="geo.placename" content="Lahore, Punjab, Pakistan" />
         <meta name="geo.position" content="31.5204;74.3587" />
