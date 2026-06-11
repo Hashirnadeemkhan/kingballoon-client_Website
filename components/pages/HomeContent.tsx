@@ -73,11 +73,16 @@ const galleryPreview = [
   { src: "/WhatsApp Image 2026-06-02 at 6.38.25 PM.jpeg", alt: "Blush and white birthday arch" },
 ];
 
-const videos = [
-  "/WhatsApp Video 2026-06-02 at 6.38.17 PM.mp4",
-  "/WhatsApp Video 2026-06-02 at 6.38.18 PM.mp4",
-  "/WhatsApp Video 2026-06-02 at 6.38.20 PM.mp4",
+// ── Featured this season: Giant Water Slides ──
+const featuredVideos = [
   "/WhatsApp Video 2026-06-02 at 6.38.21 PM.mp4",
+  "/WhatsApp Video 2026-06-02 at 6.38.20 PM.mp4",
+];
+
+const waterSlidePhotos = [
+  { src: "/WhatsApp Image 2026-06-02 at 6.37.47 PM.jpeg", label: "Giant Slide with Splash Pool" },
+  { src: "/WhatsApp Image 2026-06-02 at 6.37.44 PM.jpeg", label: "Dino Water Slide & Pool" },
+  { src: "/WhatsApp Image 2026-06-02 at 6.37.46 PM.jpeg", label: "Twin-Lane Splash Slide" },
 ];
 
 function useScrollReveal() {
@@ -231,6 +236,82 @@ export default function HomeContent() {
               <div key={s.label} className="text-center section-reveal">
                 <p className="text-4xl font-extrabold text-gold-gradient mb-1">{s.value}</p>
                 <p className="text-white/55 text-sm tracking-wide">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FEATURED THIS SEASON: WATER SLIDES (black band) ── */}
+      <section className="on-dark bg-ink py-24 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* LEFT — content */}
+            <div className="section-reveal">
+              <span className="inline-flex items-center gap-2 border border-gold/40 bg-gold/10 text-gold text-xs font-semibold px-4 py-2 rounded-full mb-6 tracking-widest uppercase">
+                <Sparkles size={12} /> This Season&apos;s #1 Attraction
+              </span>
+              <h2 className="text-4xl sm:text-5xl font-extrabold mb-5 text-white leading-[1.1]">
+                Giant <span className="text-gold-gradient">Water Slides</span>
+              </h2>
+              <p className="text-white/70 leading-relaxed mb-7 text-[15px] max-w-xl">
+                When the Lahore sun is out, nothing beats a towering inflatable water slide. Each one
+                comes with a built-in splash pool — the ultimate centrepiece for summer birthdays,
+                school fun-days and family get-togethers. We deliver, set up and collect, so you just
+                splash and enjoy.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Built-in splash pool & multiple slide lanes",
+                  "CE-certified & safe — ideal for ages 3–15",
+                  "Free delivery, setup & collection across Lahore",
+                  "Perfect for lawns, farmhouses & school grounds",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-white/80 text-sm">
+                    <Star size={14} className="text-gold mt-1 shrink-0" fill="currentColor" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="https://wa.me/923159555528?text=Hello%20King%20Balloon!%20I%20want%20to%20book%20a%20giant%20water%20slide." target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-ink font-bold px-8 py-4 rounded-full transition-all duration-300 text-sm shadow-gold hover:scale-105"
+              >
+                <Phone size={16} /> Book a Water Slide
+              </a>
+            </div>
+
+            {/* RIGHT — the two featured videos */}
+            <div className="section-reveal grid grid-cols-2 gap-4 sm:gap-5">
+              {featuredVideos.map((src, i) => (
+                <div
+                  key={src}
+                  className="relative rounded-2xl overflow-hidden border border-white/10 aspect-[9/16] bg-black shadow-lift"
+                  style={{ transitionDelay: `${i * 80}ms` }}
+                >
+                  <video src={src} className="w-full h-full object-cover" autoPlay muted loop playsInline preload="metadata" />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-gold/15 rounded-2xl pointer-events-none" />
+                  <span className="absolute top-3 left-3 bg-gold text-ink text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wide shadow-sm">
+                    Live
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* photo strip */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5 mt-10 sm:mt-12">
+            {waterSlidePhotos.map((p, i) => (
+              <div
+                key={p.src}
+                className={`group relative rounded-2xl overflow-hidden border border-white/10 aspect-[4/3] bg-cream-deep shadow-lift section-reveal ${
+                  i === 2 ? "col-span-2 sm:col-span-1" : ""
+                }`}
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                <FitImage src={p.src} alt={p.label} sizes="(max-width: 640px) 50vw, 33vw" zoom={false} />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent" />
+                <p className="absolute bottom-3 left-4 right-4 text-white text-xs font-semibold tracking-wide">{p.label}</p>
               </div>
             ))}
           </div>
@@ -429,43 +510,6 @@ export default function HomeContent() {
                 See More Setups <ChevronRight size={16} />
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── VIDEO SHOWCASE (black band) ── */}
-      <section className="on-dark bg-ink py-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-14 section-reveal">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Watch Us Work</span>
-            <h2 className="text-4xl sm:text-5xl font-extrabold mt-3 mb-4 text-white">
-              Our Setups in <span className="text-gold-gradient">Motion</span>
-            </h2>
-            <p className="text-white/55 max-w-xl mx-auto text-sm">
-              A few real moments from recent King Balloon events around Lahore.
-            </p>
-            <div className="gold-divider w-24 mx-auto mt-5" />
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-            {videos.map((src, i) => (
-              <div
-                key={src}
-                className="relative rounded-2xl overflow-hidden border border-white/10 aspect-[9/16] bg-black section-reveal shadow-lift"
-                style={{ transitionDelay: `${i * 80}ms` }}
-              >
-                <video
-                  src={src}
-                  className="w-full h-full object-cover"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                />
-                <div className="absolute inset-0 ring-1 ring-inset ring-gold/15 rounded-2xl pointer-events-none" />
-              </div>
-            ))}
           </div>
         </div>
       </section>

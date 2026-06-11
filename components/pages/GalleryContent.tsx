@@ -84,7 +84,6 @@ const slideshowPool = [
 
 const videos = [
   "/WhatsApp Video 2026-06-02 at 6.38.17 PM.mp4",
-  "/WhatsApp Video 2026-06-02 at 6.38.18 PM.mp4",
   "/WhatsApp Video 2026-06-02 at 6.38.20 PM.mp4",
   "/WhatsApp Video 2026-06-02 at 6.38.21 PM.mp4",
 ];
