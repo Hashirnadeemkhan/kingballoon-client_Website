@@ -48,7 +48,7 @@ export const metadata: Metadata = {
       "Lahore's premier inflatable rental company. 16+ themed bounce castles, water slides & giant games. Delivered & setup at your venue. Call 0315-9555528.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-cover.jpg",
         width: 1200,
         height: 630,
         alt: "King Balloon — Inflatable Bounce Castle Rentals Lahore",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "King Balloon | Bounce Castle Rental Lahore",
     description:
       "16+ themed inflatables for birthdays, weddings & corporate events. Professional delivery & setup. Call 0315-9555528.",
-    images: ["/og-image.jpg"],
+    images: ["/og-cover.jpg"],
   },
   robots: {
     index: true,

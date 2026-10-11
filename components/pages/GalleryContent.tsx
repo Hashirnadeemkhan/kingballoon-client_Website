@@ -4,81 +4,24 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, X, Play, Pause, Phone } from "lucide-react";
 import FitImage from "@/components/FitImage";
+import { categories, allPhotos } from "@/components/data/portfolio";
 
-const allImages = [
-  // ── Elegant & Glam (white / black / gold luxe) ──
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.22 PM.jpeg", title: "Gold & Black Glam Backdrop", cat: "Elegant & Glam" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.35 PM.jpeg", title: "Black & Silver Luxe Setup", cat: "Elegant & Glam" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.40 PM.jpeg", title: "Silver Shimmer Backdrop", cat: "Elegant & Glam" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.31 PM.jpeg", title: "Rose Gold Balloon Garland", cat: "Elegant & Glam" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.23 PM.jpeg", title: "Rose Gold Birthday Backdrop", cat: "Elegant & Glam" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.39 PM.jpeg", title: "Blush & White Birthday Arch", cat: "Elegant & Glam" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.25 PM.jpeg", title: "White & Blush Round Backdrop", cat: "Elegant & Glam" },
-  // ── Themed Birthdays (character & kids themes) ──
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.14 PM.jpeg", title: "Unicorn & Butterfly Backdrop", cat: "Themed Birthdays" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.26 PM.jpeg", title: "Minnie Mouse Birthday", cat: "Themed Birthdays" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.37.50 PM.jpeg", title: "Under the Sea Theme", cat: "Themed Birthdays" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.37.48 PM.jpeg", title: "Under the Sea Backdrop", cat: "Themed Birthdays" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.37.40 PM.jpeg", title: "Lion King 1st Birthday", cat: "Themed Birthdays" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.02 PM.jpeg", title: "Gaming / Roblox Theme", cat: "Themed Birthdays" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.33 PM.jpeg", title: "K-Pop Theme Setup", cat: "Themed Birthdays" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.37 PM.jpeg", title: "K-Pop Character Backdrop", cat: "Themed Birthdays" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.37.53 PM.jpeg", title: "Rainbow Shimmer Backdrop", cat: "Themed Birthdays" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.37.42 PM.jpeg", title: "Grand Entrance Arch", cat: "Themed Birthdays" },
-  // ── Princess / Sleeping Beauty Theme (real event) ──
-  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM (2).jpeg", title: "Sleeping Beauty Castle Backdrop", cat: "Themed Birthdays" },
-  { src: "/WhatsApp Image 2026-06-07 at 10.22.28 PM.jpeg", title: "Princess Aurora Standee", cat: "Themed Birthdays" },
-  { src: "/WhatsApp Image 2026-06-07 at 10.22.28 PM (1).jpeg", title: "Pink Ombré Balloon Arch", cat: "Themed Birthdays" },
-  { src: "/WhatsApp Image 2026-06-07 at 10.22.30 PM.jpeg", title: "Pink Balloon Entrance Tunnel", cat: "Themed Birthdays" },
-  // ── Event Styling (full real events: backdrop + furniture + styling) ──
-  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM.jpeg", title: "Princess Castle Stage Setup", cat: "Event Styling" },
-  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM (3).jpeg", title: "Princess Theme Hall Styling", cat: "Event Styling" },
-  { src: "/WhatsApp Image 2026-06-07 at 10.22.28 PM (2).jpeg", title: "Happy Birthday Princess Corner", cat: "Event Styling" },
-  { src: "/first.jpeg", title: "Kids Party Full Setup", cat: "Event Styling" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.06 PM.jpeg", title: "Pink Unicorn Garden", cat: "Event Styling" },
-  { src: "/second.jpeg", title: "Pink Garden Welcome Setup", cat: "Event Styling" },
-  { src: "/third.jpeg", title: "White Cane Furniture Styling", cat: "Event Styling" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.11 PM.jpeg", title: "Complete Garden Styling", cat: "Event Styling" },
-  { src: "/fourth.jpeg", title: "Draped Stage Setup", cat: "Event Styling" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.04 PM.jpeg", title: "Garden Celebration Welcome", cat: "Event Styling" },
-  // ── Inflatable Rentals ──
-  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM (1).jpeg", title: "Princess Castle Bouncer", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.37.47 PM.jpeg", title: "Giant Water Slide", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.37.44 PM.jpeg", title: "Dino Water Slide & Pool", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.11.58 AM.jpeg", title: "Princess Castle", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.11.58 AM (1).jpeg", title: "Dalmatian Bouncer", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.11.58 AM (2).jpeg", title: "Pink & White Castle", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.11.59 AM.jpeg", title: "Unicorn Castle", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.11.59 AM (1).jpeg", title: "Monkey Bouncer", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.11.59 AM (2).jpeg", title: "Spider-Man Castle", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.12.00 AM.jpeg", title: "Disney Cars Combo", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.12.00 AM (1).jpeg", title: "Bugs Bunny Bouncer", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.12.01 AM.jpeg", title: "Dracula Castle", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.12.01 AM (1).jpeg", title: "Minions Combo Slide", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.12.01 AM (2).jpeg", title: "Combo Water Slide", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.12.02 AM.jpeg", title: "Climbing Wall & Slide", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.12.02 AM (1).jpeg", title: "Blue Classic Castle", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.12.03 AM.jpeg", title: "Football Dartboard", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.12.03 AM (1).jpeg", title: "Jungle Safari Combo", cat: "Inflatable Rentals" },
-  { src: "/WhatsApp Image 2026-05-10 at 12.12.04 AM.jpeg", title: "White Wedding Castle", cat: "Inflatable Rentals" },
-  // ── Floral & Gifts ──
-  { src: "/2025-02-05.jpg", title: "Valentine's Balloon & Rose Bouquet", cat: "Floral & Gifts" },
-];
+const allImages = allPhotos;
 
-const categories = ["All", "Elegant & Glam", "Themed Birthdays", "Event Styling", "Inflatable Rentals", "Floral & Gifts"];
+const filters = ["All", ...categories.map((c) => c.label)];
 
 const slideshowPool = [
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.35 PM.jpeg", label: "Black & Silver Luxe Setup" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.22 PM.jpeg", label: "Gold & Black Glam Backdrop" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.40 PM.jpeg", label: "Silver Shimmer Backdrop" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.31 PM.jpeg", label: "Rose Gold Balloon Garland" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.06 PM.jpeg", label: "Pink Unicorn Garden" },
+  { src: "/WhatsApp Image 2026-06-02 at 6.37.40 PM.jpeg", label: "Lion King 1st Birthday Stage" },
+  { src: "/portfolio/mehndi-stage-floral-frame.jpg", label: "Mehndi Stage — Floral Frame" },
+  { src: "/WhatsApp Image 2026-06-02 at 6.38.38 PM.jpeg", label: "Silver Shimmer Birthday Wall" },
+  { src: "/portfolio/unicorn-rainbow-stage.jpg", label: "Unicorn Rainbow Stage" },
+  { src: "/WhatsApp Image 2026-06-02 at 6.37.47 PM.jpeg", label: "Giant Water Slide" },
   { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM.jpeg", label: "Princess Castle Stage Setup" },
-  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM (2).jpeg", label: "Sleeping Beauty Castle Backdrop" },
-  { src: "/first.jpeg", label: "Kids Party Full Setup" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.37.40 PM.jpeg", label: "Lion King 1st Birthday" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.14 PM.jpeg", label: "Unicorn & Butterfly Backdrop" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.39 PM.jpeg", label: "Blush & White Birthday Arch" },
+  { src: "/portfolio/mehndi-orange-canopy.jpg", label: "Mehndi Orange Canopy" },
+  { src: "/WhatsApp Image 2026-06-02 at 6.38.31 PM.jpeg", label: "Rose Gold Round Backdrop" },
+  { src: "/portfolio/boss-baby-stage.jpg", label: "Boss Baby Twins Stage" },
+  { src: "/WhatsApp Image 2026-05-10 at 12.11.59 AM.jpeg", label: "Unicorn Jumping Castle" },
+  { src: "/WhatsApp Image 2026-06-02 at 6.38.39 PM.jpeg", label: "Blush & White Garden Arch" },
   { src: "/WhatsApp Image 2026-06-02 at 6.37.42 PM.jpeg", label: "Grand Entrance Arch" },
 ];
 
@@ -184,7 +127,7 @@ export default function GalleryContent() {
             Browse <span className="text-gold-gradient">All Work</span>
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((cat) => (
+            {filters.map((cat) => (
               <button
                 key={cat}
                 onClick={() => { setActiveFilter(cat); setLightboxIdx(null); }}

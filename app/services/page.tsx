@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ServicesContent from "@/components/pages/ServicesContent";
 
 export const metadata: Metadata = {
-  title: "Services — Balloon Decoration, Bounce Castles, Water Slides & Inflatables",
+  title: "Services — Balloon Décor, Jumping Castles, Water Slides & Event Management",
   description:
-    "Browse King Balloon's full collection of 16+ inflatables in Lahore: themed bounce castles, combo slides, water slides & giant inflatable games. CE-certified, delivered & setup at your venue. Call 0315-9555528.",
+    "King Balloon services in Lahore: birthday & anniversary balloon décor, 40+ jumping castles, giant water slides, mehndi stages, furniture, catering setups & floral gifts. Call 0315-9555528.",
   alternates: {
     canonical: "https://www.kingballoon.pk/services",
   },
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: "https://www.kingballoon.pk/services",
     images: [
       {
-        url: "/WhatsApp Image 2026-05-10 at 12.12.02 AM.jpeg",
+        url: "/og-cover.jpg",
         width: 1200,
         height: 630,
         alt: "King Balloon inflatable services Lahore",

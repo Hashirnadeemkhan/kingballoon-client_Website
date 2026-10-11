@@ -7,51 +7,57 @@ import { Star, ChevronRight, Phone, CheckCircle, Sparkles, Crown } from "lucide-
 import FitImage from "@/components/FitImage";
 
 const heroSlides = [
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.35 PM.jpeg", label: "Black & Silver Luxe Setup" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.22 PM.jpeg", label: "Gold & Black Glam Backdrop" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.31 PM.jpeg", label: "Rose Gold Balloon Garland" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.06 PM.jpeg", label: "Pink Unicorn Garden Theme" },
+  { src: "/WhatsApp Image 2026-06-02 at 6.37.40 PM.jpeg", label: "Lion King 1st Birthday Stage" },
+  { src: "/portfolio/mehndi-stage-floral-frame.jpg", label: "Mehndi Stage Decor" },
+  { src: "/WhatsApp Image 2026-06-02 at 6.38.31 PM.jpeg", label: "Rose Gold Round Backdrop" },
+  { src: "/portfolio/rainbow-balloon-wall.jpg", label: "Rainbow Balloon Wall" },
   { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM.jpeg", label: "Princess Castle Theme Setup" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.40 PM.jpeg", label: "Silver Shimmer Backdrop" },
+  { src: "/WhatsApp Image 2026-06-02 at 6.37.53 PM.jpeg", label: "Rainbow Shimmer Backdrop" },
   { src: "/WhatsApp Image 2026-06-02 at 6.37.42 PM.jpeg", label: "Grand Entrance Arch" },
 ];
 
 const services = [
   {
     title: "Balloon Décor & Backdrops",
-    desc: "Elegant balloon garlands, shimmer walls, neon signs & custom themed backdrops that make every event picture-perfect.",
-    img: "/WhatsApp Image 2026-06-02 at 6.38.31 PM.jpeg",
+    desc: "Birthday & anniversary décor — balloon garlands, shimmer walls, neon signs & custom themed backdrops that make every event picture-perfect.",
+    img: "/WhatsApp Image 2026-06-02 at 6.38.23 PM.jpeg",
     tag: "Most Popular",
+    category: "decor",
   },
   {
-    title: "Themed Bounce Castles",
-    desc: "16+ characters — unicorns, Minions, Spider-Man & more. Safe, CE-certified inflatables delivered to your door.",
+    title: "Jumping Castles",
+    desc: "40+ themed bounce castles, combo slides & kids rides — unicorns, Minions, Spider-Man & more. Safe, CE-certified and delivered to your door.",
     img: "/WhatsApp Image 2026-05-10 at 12.11.59 AM.jpeg",
     tag: "Kids Favourite",
+    category: "jumping-castles",
+  },
+  {
+    title: "Water Slides",
+    desc: "Giant inflatable water slides with built-in splash pools — the ultimate summer party fun.",
+    img: "/portfolio/blue-wave-water-slide.jpg",
+    tag: "Summer Fun",
+    category: "water-slides",
+  },
+  {
+    title: "Mehndi & Wedding Stages",
+    desc: "Fresh-flower mehndi stages, bridal canopies and royal sofa setups — styled end-to-end by our event team.",
+    img: "/portfolio/mehndi-orange-canopy.jpg",
+    tag: "Weddings",
+    category: "event-management",
+  },
+  {
+    title: "Event Management",
+    desc: "Chairs, tables & sofa sets, buffet and catering setups, food carts and complete venue styling for any event.",
+    img: "/portfolio/tiffany-chairs-long-tables.jpg",
+    tag: "Premium",
+    category: "event-management",
   },
   {
     title: "Floral & Gift Packages",
     desc: "Fresh flower bouquets, balloon & rose combos, and curated gift hampers for birthdays, Eid, and Valentine's Day.",
     img: "/2025-02-05.jpg",
     tag: "Same-Day Delivery",
-  },
-  {
-    title: "Premium Event Styling",
-    desc: "Elegant cane furniture, table styling, candy carts & full venue dressing for bridal showers and upscale events.",
-    img: "/third.jpeg",
-    tag: "Premium",
-  },
-  {
-    title: "Water Slides & Combos",
-    desc: "Giant inflatable water slides with pools plus bounce-and-slide combos — the ultimate summer party fun.",
-    img: "/WhatsApp Image 2026-06-02 at 6.37.47 PM.jpeg",
-    tag: "Summer Fun",
-  },
-  {
-    title: "Themed Sequin Walls",
-    desc: "Sparkling sequin shimmer walls and character backdrops — from K-Pop to gaming themes, built for the photos.",
-    img: "/WhatsApp Image 2026-06-02 at 6.38.33 PM.jpeg",
-    tag: "Trending",
+    category: "floral",
   },
 ];
 
@@ -64,13 +70,13 @@ const stats = [
 
 const galleryPreview = [
   { src: "/WhatsApp Image 2026-06-02 at 6.38.14 PM.jpeg", alt: "Unicorn & butterfly themed backdrop" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.37.40 PM.jpeg", alt: "Lion King first birthday stage" },
+  { src: "/portfolio/boss-baby-stage.jpg", alt: "Boss Baby twins birthday stage" },
   { src: "/WhatsApp Image 2026-06-02 at 6.37.50 PM.jpeg", alt: "Under the sea themed birthday setup" },
   { src: "/WhatsApp Image 2026-06-02 at 6.38.02 PM.jpeg", alt: "Gaming theme birthday backdrop" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.33 PM.jpeg", alt: "K-Pop themed sequin wall setup" },
-  { src: "/WhatsApp Image 2026-06-07 at 10.22.29 PM (2).jpeg", alt: "Sleeping Beauty princess castle backdrop" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.37.47 PM.jpeg", alt: "Giant inflatable water slide" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.38.25 PM.jpeg", alt: "Blush and white birthday arch" },
+  { src: "/portfolio/dino-shark-twins-birthday.jpg", alt: "Dino and shark twins birthday setup" },
+  { src: "/portfolio/minnie-dessert-table.jpg", alt: "Minnie Mouse dessert table setup" },
+  { src: "/portfolio/mehndi-hall-stage.jpg", alt: "Mehndi hall stage decoration" },
+  { src: "/portfolio/wild-one-jungle-theme.jpg", alt: "Wild One jungle theme birthday" },
 ];
 
 // ── Featured this season: Giant Water Slides ──
@@ -81,8 +87,8 @@ const featuredVideos = [
 
 const waterSlidePhotos = [
   { src: "/WhatsApp Image 2026-06-02 at 6.37.47 PM.jpeg", label: "Giant Slide with Splash Pool" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.37.44 PM.jpeg", label: "Dino Water Slide & Pool" },
-  { src: "/WhatsApp Image 2026-06-02 at 6.37.46 PM.jpeg", label: "Twin-Lane Splash Slide" },
+  { src: "/WhatsApp Image 2026-06-02 at 6.37.44 PM.jpeg", label: "Water Slide & Splash Pool" },
+  { src: "/portfolio/tropical-water-slide-pool.jpg", label: "Tropical Water Slide & Pool" },
 ];
 
 function useScrollReveal() {
@@ -152,7 +158,7 @@ export default function HomeContent() {
               </div>
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-3 text-sm text-ink-soft">
-                {["Balloon Décor", "Bounce Castles", "Floral & Gifts", "Bridal Setups"].map((t) => (
+                {["Balloon Décor", "Jumping Castles", "Water Slides", "Event Management"].map((t) => (
                   <span key={t} className="flex items-center gap-2">
                     <CheckCircle size={15} className="text-gold" />
                     {t}
@@ -357,7 +363,7 @@ export default function HomeContent() {
                 </h3>
                 <p className="text-ink-mute text-sm leading-relaxed mb-4">{s.desc}</p>
                 <Link
-                  href="/services"
+                  href={`/services?category=${s.category}#services`}
                   className="inline-flex items-center gap-1 text-gold-dark text-xs font-semibold tracking-wide hover:gap-2 transition-all duration-200"
                 >
                   Learn More <ChevronRight size={14} />
@@ -388,8 +394,8 @@ export default function HomeContent() {
                 Setups That <span className="text-gold-gradient">Stop the Scroll</span>
               </h2>
               <p className="text-ink-mute leading-relaxed mb-6 text-[15px]">
-                Our decoration team creates breathtaking party setups — from sleek black, gold &amp;
-                silver glam backdrops to dreamy pastel themes. Every setup is custom-designed to match
+                Our decoration team creates breathtaking party setups — from rainbow balloon walls
+                and rose-gold garlands to dreamy pastel themes. Every setup is custom-designed to match
                 your colour palette, theme, and venue.
               </p>
               <ul className="space-y-3 mb-8">
@@ -418,16 +424,16 @@ export default function HomeContent() {
             <div className="order-1 lg:order-2 section-reveal">
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative h-64 rounded-2xl overflow-hidden shadow-soft bg-cream-deep">
-                  <FitImage src="/WhatsApp Image 2026-06-02 at 6.38.35 PM.jpeg" alt="Black and silver luxe balloon setup" sizes="25vw" zoom={false} />
+                  <FitImage src="/portfolio/pink-gold-round-backdrop.jpg" alt="Pink and gold round birthday backdrop" sizes="25vw" zoom={false} />
                 </div>
                 <div className="relative h-64 rounded-2xl overflow-hidden mt-6 shadow-soft bg-cream-deep">
-                  <FitImage src="/WhatsApp Image 2026-06-02 at 6.38.40 PM.jpeg" alt="Silver shimmer happy birthday backdrop" sizes="25vw" zoom={false} />
+                  <FitImage src="/portfolio/unicorn-rainbow-stage.jpg" alt="Unicorn rainbow birthday stage" sizes="25vw" zoom={false} />
                 </div>
                 <div className="relative h-48 rounded-2xl overflow-hidden shadow-soft bg-cream-deep">
-                  <FitImage src="/WhatsApp Image 2026-06-02 at 6.38.31 PM.jpeg" alt="Rose gold balloon garland setup" sizes="25vw" zoom={false} />
+                  <FitImage src="/portfolio/silver-white-birthday-hoop.jpg" alt="Silver and white birthday balloon hoop" sizes="25vw" zoom={false} />
                 </div>
                 <div className="relative h-48 rounded-2xl overflow-hidden mt-3 shadow-soft bg-cream-deep">
-                  <FitImage src="/WhatsApp Image 2026-06-02 at 6.38.22 PM.jpeg" alt="Gold and black glam backdrop" sizes="25vw" zoom={false} />
+                  <FitImage src="/portfolio/numberblocks-birthday.jpg" alt="Numberblocks themed birthday setup" sizes="25vw" zoom={false} />
                 </div>
               </div>
             </div>
@@ -633,8 +639,8 @@ export default function HomeContent() {
       <section className="on-dark relative py-28 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/WhatsApp Image 2026-06-02 at 6.38.22 PM.jpeg"
-            alt="King Balloon gold and black event decoration setup"
+            src="/WhatsApp Image 2026-06-02 at 6.38.35 PM.jpeg"
+            alt="King Balloon K-Pop themed birthday stage"
             fill
             className="object-cover"
             sizes="100vw"

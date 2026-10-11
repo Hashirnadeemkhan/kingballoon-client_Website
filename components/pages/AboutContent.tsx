@@ -65,8 +65,8 @@ export default function AboutContent() {
               <div className="relative aspect-[5/4] rounded-[2rem] overflow-hidden shadow-lift ring-1 ring-king-border bg-white p-2">
                 <div className="relative w-full h-full rounded-[1.6rem] overflow-hidden bg-cream-deep">
                   <FitImage
-                    src="/WhatsApp Image 2026-06-02 at 6.38.22 PM.jpeg"
-                    alt="King Balloon gold and black luxury event setup Lahore"
+                    src="/portfolio/mehndi-stage-yellow.jpg"
+                    alt="King Balloon mehndi stage decoration Lahore"
                     priority
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     zoom={false}
@@ -108,7 +108,7 @@ export default function AboutContent() {
           </div>
           <div className="grid grid-cols-2 gap-4 section-reveal">
             <div className="relative h-64 rounded-2xl overflow-hidden shadow-soft bg-cream-deep">
-              <FitImage src="/WhatsApp Image 2026-06-02 at 6.38.31 PM.jpeg" alt="Rose gold balloon garland birthday setup" sizes="25vw" zoom={false} />
+              <FitImage src="/portfolio/rose-gold-neon-birthday.jpg" alt="Rose gold neon birthday setup" sizes="25vw" zoom={false} />
             </div>
             <div className="relative h-64 rounded-2xl overflow-hidden mt-8 shadow-soft bg-cream-deep">
               <FitImage src="/WhatsApp Image 2026-06-02 at 6.38.06 PM.jpeg" alt="Pink unicorn garden birthday setup" sizes="25vw" zoom={false} />
